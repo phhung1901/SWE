@@ -20,7 +20,7 @@ class CreateOrderDetailsTable extends Migration
             $table->integer('quantity');
             $table->string('size', 5);
             $table->double('discount', 8, 2);
-            $table->double('total', 8, 2);
+            $table->double('total', 12, 2);
             $table->string('payment_name', 100);
             $table->timestamps();
             $table->foreign('order_id')->references('id')->on('orders');

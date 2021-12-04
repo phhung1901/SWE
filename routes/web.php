@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix("/")->group(function(){
     Route::get('/', [ProductController::class, 'index'])->name('index');
-    Route::get('top', function () {
-        return view('client.pages.top');
-    })->name('top');
+    Route::get('top', [ProductController::class, 'topProduct'])->name('top');
     Route::get('sale', function () {
         return view('client.pages.sale');
     })->name('sale');

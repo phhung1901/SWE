@@ -70,327 +70,67 @@
                                 <div id="grid" class="tab-pane fade show active">
                                     <div class="product-grid-view">
                                         <div class="row">
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="single-product mb-10">
-                                                    <div class="product-img img-full">
-                                                        <a href="/products/skeleton-tee-washed-black">
-
-                                                            <img class="visible-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/7701_ee8c7b2bf2de40c7bfe40825d0efd112_medium.jpg"
-                                                                data-src="//product.hstatic.net/1000344185/product/7701_ee8c7b2bf2de40c7bfe40825d0efd112_medium.jpg"
-                                                                alt="">
-
-                                                            <img class="hidden-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/7701_ee8c7b2bf2de40c7bfe40825d0efd112_grande.jpg"
-                                                                alt=""
-                                                                data-src="//product.hstatic.net/1000344185/product/7701_ee8c7b2bf2de40c7bfe40825d0efd112_grande.jpg">
-                                                            <img class="pro-img2 hidden-xs"
-                                                                src="//product.hstatic.net/1000344185/product/7704_8c293391051a4471aac21d3d7aa29da4_grande.jpg"
-                                                                alt="">
-
-                                                        </a>
-
-                                                        <span class="onsale">-10%</span>
-
-                                                        <a href="#" class="product-action btn-quickview-1"
-                                                            data-handle="/products/skeleton-tee-washed-black">
-                                                            <ul>
-                                                                <li>XEM NHANH</li>
-
-                                                            </ul>
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h2><a href="/products/skeleton-tee-washed-black">SKELETON
-                                                                TEE - WASHED BLACK</a></h2>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-
-
-                                                                <span class="price">420,000₫</span>
-
-                                                                <span class="regular-price">378,000₫</span>
-                                                            </div>
-
+                                            @if ($top_product)
+                                                @foreach ($top_product as $item)
+                                                <div class="col-md-3 col-sm-6 col-xs-6">
+                                                    <div class="single-product mb-10">
+                                                        <div class="product-img img-full">
+                                                            <a href="/products/skeleton-tee-washed-black">
+    
+                                                                {{-- <img class="visible-xs lazyload"
+                                                                    src="//product.hstatic.net/1000344185/product/7701_ee8c7b2bf2de40c7bfe40825d0efd112_medium.jpg"
+                                                                    data-src="//product.hstatic.net/1000344185/product/7701_ee8c7b2bf2de40c7bfe40825d0efd112_medium.jpg"
+                                                                    alt="">--}}
+                                                                @php
+                                                                    $image = json_decode($item['image']);
+                                                                @endphp
+                                                                <img class="hidden-xs lazyload" src="{{asset('assets/client/img/'.$image->image1)}}" alt="">
+                                                                <img class="pro-img2 hidden-xs" src="{{asset('assets/client/img/'.$image->image2)}}" alt="">
+                                                            </a>
+    
+                                                            <span class="onsale">-10%</span>
+    
+                                                            <a href="#" class="product-action btn-quickview-1"
+                                                                data-handle="/products/skeleton-tee-washed-black">
+                                                                <ul>
+                                                                    <li>XEM NHANH</li>
+    
+                                                                </ul>
+                                                            </a>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="size-avai clearfix">
-                                                        <span class="title">Kích thướt: </span>
-                                                        <span class="size-variant ">
-                                                            S</span>
-                                                        <span class="size-variant ">
-                                                            M</span>
-                                                        <span class="size-variant ">
-                                                            L</span>
-                                                        <span class="size-variant ">
-                                                            XL</span>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-
-                                                <div class="single-product mb-10">
-                                                    <div class="product-img img-full">
-                                                        <a href="/products/47-jersey-taupe">
-
-                                                            <img class="visible-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/7847_325266b3f1c84d2d91450a97631ba459_medium.jpg"
-                                                                data-src="//product.hstatic.net/1000344185/product/7847_325266b3f1c84d2d91450a97631ba459_medium.jpg"
-                                                                alt="">
-
-                                                            <img class="hidden-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/7847_325266b3f1c84d2d91450a97631ba459_grande.jpg"
-                                                                alt=""
-                                                                data-src="//product.hstatic.net/1000344185/product/7847_325266b3f1c84d2d91450a97631ba459_grande.jpg">
-                                                            <img class="pro-img2 hidden-xs"
-                                                                src="//product.hstatic.net/1000344185/product/7850_c41aa7e255a142f6affa6656e49db34f_grande.jpg"
-                                                                alt="">
-
-                                                        </a>
-
-                                                        <span class="onsale">-30%</span>
-
-                                                        <a href="#" class="product-action btn-quickview-1"
-                                                            data-handle="/products/47-jersey-taupe">
-                                                            <ul>
-                                                                <li>XEM NHANH</li>
-
-                                                            </ul>
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h2><a href="/products/47-jersey-taupe">47 JERSEY -
-                                                                TAUPE</a></h2>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-
-
-                                                                <span class="price">350,000₫</span>
-
-                                                                <span class="regular-price">245,000₫</span>
+                                                        <div class="product-content">
+                                                            <h2><a href="/products/skeleton-tee-washed-black">{{$item['product_name']}}</a></h2>
+                                                            <div class="product-price">
+                                                                <div class="price-box">
+                                                                    @if ($item['discount'] > 0)
+                                                                        <span class="price">{{$item['price']}}₫</span>
+                                                                        <span class="regular-price">{{$item['price'] * (1-$item['discount'])}}₫</span>
+                                                                    @else
+                                                                        <span class="regular-price">{{$item['price']}}₫</span>
+                                                                    @endif
+                                                                </div>
+    
                                                             </div>
-
                                                         </div>
+    
+                                                        {{-- <div class="size-avai clearfix">
+                                                            <span class="title">Kích thướt: </span>
+                                                            <span class="size-variant ">
+                                                                S</span>
+                                                            <span class="size-variant ">
+                                                                M</span>
+                                                            <span class="size-variant ">
+                                                                L</span>
+                                                            <span class="size-variant ">
+                                                                XL</span>
+    
+                                                        </div> --}}
+    
                                                     </div>
-
-                                                    <div class="size-avai clearfix">
-                                                        <span class="title">Kích thướt: </span>
-                                                        <span class="size-variant ">
-                                                            S</span>
-                                                        <span class="size-variant ">
-                                                            M</span>
-                                                        <span class="size-variant ">
-                                                            L</span>
-                                                        <span class="size-variant ">
-                                                            XL</span>
-
-                                                    </div>
-
+    
                                                 </div>
-
-                                            </div>
-
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-
-                                                <div class="single-product mb-10">
-                                                    <div class="product-img img-full">
-                                                        <a href="/products/47-jersey-black">
-
-                                                            <img class="visible-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/7875_0fa992e5c5e04f1ca4566d6eb61b92fc_medium.jpg"
-                                                                data-src="//product.hstatic.net/1000344185/product/7875_0fa992e5c5e04f1ca4566d6eb61b92fc_medium.jpg"
-                                                                alt="">
-
-                                                            <img class="hidden-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/7875_0fa992e5c5e04f1ca4566d6eb61b92fc_grande.jpg"
-                                                                alt=""
-                                                                data-src="//product.hstatic.net/1000344185/product/7875_0fa992e5c5e04f1ca4566d6eb61b92fc_grande.jpg">
-                                                            <img class="pro-img2 hidden-xs"
-                                                                src="//product.hstatic.net/1000344185/product/7877_a18216deb5944e0fa73690e434bb8fa1_grande.jpg"
-                                                                alt="">
-
-                                                        </a>
-
-                                                        <span class="onsale">-30%</span>
-
-                                                        <a href="#" class="product-action btn-quickview-1"
-                                                            data-handle="/products/47-jersey-black">
-                                                            <ul>
-                                                                <li>XEM NHANH</li>
-
-                                                            </ul>
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h2><a href="/products/47-jersey-black">47 JERSEY -
-                                                                BLACK</a></h2>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-
-
-                                                                <span class="price">350,000₫</span>
-
-                                                                <span class="regular-price">245,000₫</span>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="size-avai clearfix">
-                                                        <span class="title">Kích thướt: </span>
-                                                        <span class="size-variant ">
-                                                            S</span>
-                                                        <span class="size-variant ">
-                                                            M</span>
-                                                        <span class="size-variant ">
-                                                            L</span>
-                                                        <span class="size-variant ">
-                                                            XL</span>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-                                                <div class="single-product mb-10">
-                                                    <div class="product-img img-full">
-                                                        <a href="/products/eazy-tee-mint-green">
-
-                                                            <img class="visible-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/9823_d1ced171309b4c56bc87aa658691de5a_medium.jpg"
-                                                                data-src="//product.hstatic.net/1000344185/product/9823_d1ced171309b4c56bc87aa658691de5a_medium.jpg"
-                                                                alt="">
-
-                                                            <img class="hidden-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/9823_d1ced171309b4c56bc87aa658691de5a_grande.jpg"
-                                                                alt=""
-                                                                data-src="//product.hstatic.net/1000344185/product/9823_d1ced171309b4c56bc87aa658691de5a_grande.jpg">
-                                                            <img class="pro-img2 hidden-xs"
-                                                                src="//product.hstatic.net/1000344185/product/9826_0c7a892d6af64b289793d0d315821d63_grande.jpg"
-                                                                alt="">
-
-                                                        </a>
-
-                                                        <span class="onsale">-10%</span>
-
-                                                        <a href="#" class="product-action btn-quickview-1"
-                                                            data-handle="/products/eazy-tee-mint-green">
-                                                            <ul>
-                                                                <li>XEM NHANH</li>
-
-                                                            </ul>
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h2><a href="/products/eazy-tee-mint-green">EAZY TEE - MINT
-                                                                GREEN</a></h2>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-
-
-                                                                <span class="price">320,000₫</span>
-
-                                                                <span class="regular-price">288,000₫</span>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="size-avai clearfix">
-                                                        <span class="title">Kích thướt: </span>
-                                                        <span class="size-variant ">
-                                                            S</span>
-                                                        <span class="size-variant ">
-                                                            M</span>
-                                                        <span class="size-variant ">
-                                                            L</span>
-                                                        <span class="size-variant ">
-                                                            XL</span>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-
-                                                <div class="single-product mb-10">
-                                                    <div class="product-img img-full">
-                                                        <a href="/products/xtee-sand">
-
-                                                            <img class="visible-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/8811_0ee85da63f76468dbf734bf175afe330_medium.png"
-                                                                data-src="//product.hstatic.net/1000344185/product/8811_0ee85da63f76468dbf734bf175afe330_medium.png"
-                                                                alt="">
-
-                                                            <img class="hidden-xs lazyload"
-                                                                src="//product.hstatic.net/1000344185/product/8811_0ee85da63f76468dbf734bf175afe330_grande.png"
-                                                                alt=""
-                                                                data-src="//product.hstatic.net/1000344185/product/8811_0ee85da63f76468dbf734bf175afe330_grande.png">
-                                                            <img class="pro-img2 hidden-xs"
-                                                                src="//product.hstatic.net/1000344185/product/8813_83c2fa0b1bf34901b57aee5d26da1410_grande.png"
-                                                                alt="">
-
-                                                        </a>
-
-                                                        <span class="onsale">-10%</span>
-
-                                                        <a href="#" class="product-action btn-quickview-1"
-                                                            data-handle="/products/xtee-sand">
-                                                            <ul>
-                                                                <li>XEM NHANH</li>
-
-                                                            </ul>
-                                                        </a>
-                                                    </div>
-                                                    <div class="product-content">
-                                                        <h2><a href="/products/xtee-sand">X TEE - SAND</a></h2>
-                                                        <div class="product-price">
-                                                            <div class="price-box">
-
-
-                                                                <span class="price">330,000₫</span>
-
-                                                                <span class="regular-price">297,000₫</span>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="size-avai clearfix">
-                                                        <span class="title">Kích thướt: </span>
-                                                        <span class="size-variant ">
-                                                            S</span>
-                                                        <span class="size-variant ">
-                                                            M</span>
-                                                        <span class="size-variant ">
-                                                            L</span>
-                                                        <span class="size-variant ">
-                                                            XL</span>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="col-md-3 col-sm-6 col-xs-6">
-
-                                                <!--Single List Product End-->
-                                            </div>
+                                                @endforeach
+                                            @endif
                                         </div>
 
 
