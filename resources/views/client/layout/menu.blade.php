@@ -6,7 +6,7 @@
                 <span class="hd-cart-count">1</span>
             </a> -->
             <div class="col-md-2 col-xs-12 centermb">
-                <a class="logo" href="{{route('index')}}" title="">
+                <a class="logo" href="{{route('new')}}" title="">
                     <img
                         src="https://file.hstatic.net/1000344185/file/uoemj1xih2cluupbe1vw-kvjkaw1umbarw_b4167849b7b34a4687658886e20ddd0e.gif">
                 </a>
@@ -15,19 +15,19 @@
                 <nav class="main-nav abc">
                     <ul id="menu-main-menu" class="">
                         <li class="menu-item menu-item-type-post_type menu-item-object-page ">
-                            <a href="{{route('index')}}">HOME</a>
+                            <a href="{{route('new')}}">HOME</a>
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page ">
                             <a href="{{route('top')}}">TOPS</a>
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page ">
-                            <a href="/collections/outerwear">OUTERWEAR</a>
+                            <a href="{{route('outerwear')}}">OUTERWEAR</a>
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page ">
-                            <a href="/collections/bottoms">BOTTOMS</a>
+                            <a href="{{route('bottom')}}">BOTTOMS</a>
                         </li>
                         <li class="menu-item menu-item-type-post_type menu-item-object-page ">
-                            <a href="/collections/accessories">ACCESSORIES</a>
+                            <a href="{{route('acc')}}">ACCESSORIES</a>
                         </li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
                             <a href="{{route('sale')}}">SALE</a>
@@ -92,9 +92,20 @@
                             </ul>
                         </li>
                         <li class="li_logout">
+                            @if (Auth::check())
+                                <a href="{{route('info')}}">{{Auth::user()->name}}</a>
+                                <div class="logout_header"> <a href="{{route('logout')}}">Đăng xuất</a> </div>
+                            @else
+                                <a href="{{route('login')}}">Đăng nhập</a>
+                                <div class="logout_header"> <a href="{{route('register')}}">Đăng ký</a> </div>
+                            @endif
+                            {{-- <a href="{{route('login')}}">Đăng nhập</a>
+                            <div class="logout_header"> <a href="{{route('register')}}">Đăng ký</a> </div> --}}
+                        </li>
+                        {{-- <li class="li_logout">
                             <a href="{{route('info')}}">chào, </a>
                             <div class="logout_header"> <a href="/account/logout">Đăng xuất</a> </div>
-                        </li>
+                        </li> --}}
                     </ul>
                 </nav>
                 <div class="search" id="sea">

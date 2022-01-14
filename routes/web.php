@@ -1,6 +1,11 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductDetailController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +20,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix("/")->group(function(){
-    Route::get('/', [ProductController::class, 'index'])->name('index');
+    Route::get('/', [ProductController::class, 'newProduct'])->name('new');
+    Route::get('all', [ProductController::class, 'allProduct'])->name('all');
     Route::get('top', [ProductController::class, 'topProduct'])->name('top');
+    Route::get('outerwear', [ProductController::class, 'outerwearProduct'])->name('outerwear');
+    Route::get('bottom', [ProductController::class, 'bottomProduct'])->name('bottom');
+    Route::get('accessories', [ProductController::class, 'accProduct'])->name('acc');
     Route::get('sale', function () {
         return view('client.pages.sale');
     })->name('sale');
@@ -32,5 +41,18 @@ Route::prefix("/")->group(function(){
     Route::get('cart', function () {
         return view('client.pages.cart');
     })->name('cart');
+
+    Route::get('product_detail/{id}', [ProductDetailController::class, 'productDetail'])->name('product_detail');
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/login', [UserController::class, 'loginIndex'])->name('login');
+Route::post('/login', [LoginController::class, 'loginClient'])->name('client.login');
+Route::get('/register', [UserController::class, 'registerIndex'])->name('register');
+Route::post('/register', [RegisterController::class, 'registerClient'])->name('client.register');
+// Route::get('/logout', [LoginController::class, 'logoutClient'])->name('logout.client');
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

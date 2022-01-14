@@ -18,7 +18,7 @@
                         Không có sản phẩm nào trong giỏ hàng của bạn
                     </p>
                     <div class="ctnBuy button-action">
-                        <a href="{{route('index')}}" class="btn btn-outline closeCartLine">Tiếp tục mua hàng </a>
+                        <a href="{{route('new')}}" class="btn btn-outline closeCartLine">Tiếp tục mua hàng </a>
                     </div>
                 </div>
             </div>

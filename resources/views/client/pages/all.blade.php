@@ -1,5 +1,5 @@
 @extends('client.index')
-@section('title', 'TOP - SWE (STREETWEAREAZY)')
+@section('title', 'ALL - SWE (STREETWEAREAZY)')
 @section('content')
     <div class="shop-area mb-70 mt-70">
         <div class="container">
@@ -70,8 +70,8 @@
                                 <div id="grid" class="tab-pane fade show active">
                                     <div class="product-grid-view">
                                         <div class="row">
-                                            @if ($top_product)
-                                                @foreach ($top_product as $item)
+                                            @if ($all_product)
+                                                @foreach ($all_product as $item)
                                                     <div class="col-md-3 col-sm-6 col-xs-6">
                                                         <div class="single-product mb-10">
                                                             <div class="product-img img-full">
@@ -107,17 +107,15 @@
                                                                         href="/products/skeleton-tee-washed-black">{{ $item['product_name'] }}</a>
                                                                 </h2>
                                                                 <div class="product-price">
-                                                                    <div class="price-box">
-                                                                        @if ($item['discount'] > 0)
-                                                                            <span
-                                                                                class="price">{{ $item['price'] / 1000 . ',000' }}₫</span>
-                                                                            <span
-                                                                                class="regular-price">{{ ($item['price'] * (1 - $item['discount'])) / 1000 . ',000' }}₫</span>
-                                                                        @else
-                                                                            <span
-                                                                                class="regular-price">{{ $item['price'] / 1000 . ',000' }}₫</span>
-                                                                        @endif
-                                                                    </div>
+                                                                    @if ($item['discount'] > 0)
+                                                                        <span
+                                                                            class="price">{{ $item['price'] / 1000 . ',000' }}₫</span>
+                                                                        <span
+                                                                            class="regular-price">{{ ($item['price'] * (1 - $item['discount'])) / 1000 . ',000' }}₫</span>
+                                                                    @else
+                                                                        <span
+                                                                            class="regular-price">{{ $item['price'] / 1000 . ',000' }}₫</span>
+                                                                    @endif
 
                                                                 </div>
                                                             </div>

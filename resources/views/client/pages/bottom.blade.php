@@ -1,5 +1,5 @@
 @extends('client.index')
-@section('title', 'TOP - SWE (STREETWEAREAZY)')
+@section('title', 'BOTTOM - SWE (STREETWEAREAZY)')
 @section('content')
     <div class="shop-area mb-70 mt-70">
         <div class="container">
@@ -70,8 +70,8 @@
                                 <div id="grid" class="tab-pane fade show active">
                                     <div class="product-grid-view">
                                         <div class="row">
-                                            @if ($top_product)
-                                                @foreach ($top_product as $item)
+                                            @if ($bottom_product)
+                                                @foreach ($bottom_product as $item)
                                                     <div class="col-md-3 col-sm-6 col-xs-6">
                                                         <div class="single-product mb-10">
                                                             <div class="product-img img-full">
