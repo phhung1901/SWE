@@ -91,7 +91,7 @@ class RegisterController extends Controller
             // $newUser->address = $request->address;
             $newUser->password = bcrypt($request->password);
             $newUser->save();
-            return redirect()->route('all');
+            return redirect()->route('login');
         }
     }
 }

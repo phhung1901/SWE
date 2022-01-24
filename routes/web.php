@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\UserController;
@@ -56,3 +57,7 @@ Route::get('/register', [UserController::class, 'registerIndex'])->name('registe
 Route::post('/register', [RegisterController::class, 'registerClient'])->name('client.register');
 // Route::get('/logout', [LoginController::class, 'logoutClient'])->name('logout.client');
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
+// Mail with queue job
+Route::get('/testMail', [MailController::class, 'test']);
